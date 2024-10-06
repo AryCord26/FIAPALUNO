@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Aluno - Solicitação de Documentos</title>
+    <link rel="stylesheet" href="styledocs.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>Portal do Aluno</h2>
+            <ul>
+                <li><a href="#">Notas</a></li>
+                <li><a href="#">Documentos</a></li>
+                <li><a href="#">Financeiro</a></li>
+                <li><a href="#">Dados Pessoais</a></li>
+                <li><a href="#">Secretaria</a></li>
+                <li><a href="#">Frequência</a></li>
+                <li><a href="#">Material Didático</a></li>
+                <li><a href="#">TCC</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <h1>Solicitação de Documentos</h1>
+            <form class="document-request">
+                <label for="document">Escolha o Documento</label>
+                <select id="document" required>
+                    <option value="declaracao">Declaração de Matrícula</option>
+                    <option value="historico">Histórico Escolar</option>
+                    <option value="outros">Outros Documentos</option>
+                </select>
+                <button type="submit">Solicitar</button>
+            </form>
+            <section class="history">
+                <h2>Histórico de Solicitações</h2>
+                <ul>
+                    <li>Declaração de Matrícula - Status: Em andamento</li>
+                    <li>Histórico Escolar - Status: Concluído</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
