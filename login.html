@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Aluno - Login</title>
+    <link rel="stylesheet" href="stylelogin.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Portal do Aluno - FIAP</h1>
+            <form id="loginForm">
+                <input type="text" id="email" placeholder="E-mail ou Matrícula" required>
+                <input type="password" id="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+                <a href="#">Esqueci minha senha</a>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Adiciona um evento de submissão ao formulário
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();  // Impede o envio do formulário para recarregar a página
+
+            // Pega os valores dos campos de e-mail e senha
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // Simulação de autenticação simples
+            if (email === "aluno@fiap.com" && password === "123456") {
+                // Redireciona para a página do dashboard se as credenciais estiverem corretas
+                window.location.href = "dashboard.html";
+            } else {
+                // Mostra uma mensagem de erro caso o login falhe
+                alert("E-mail ou senha incorretos!");
+            }
+        });
+    </script>
+</body>
+</html>
